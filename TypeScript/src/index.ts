@@ -160,6 +160,8 @@
 // Optional element access operator
 //? customers?.[0] // if undefinde and null it will be checking
 
-// Optional Call
-let log : any = null
-log?.("a")
+//? Optional Call
+// let log : any = null
+// log?.("a")
+
+
