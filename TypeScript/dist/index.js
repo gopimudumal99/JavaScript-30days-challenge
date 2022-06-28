@@ -1,5 +1,4 @@
 "use strict";
-let age = 20;
-if (age < 50)
-    age += 15;
+let log = null;
+log === null || log === void 0 ? void 0 : log("a");
 //# sourceMappingURL=index.js.map
