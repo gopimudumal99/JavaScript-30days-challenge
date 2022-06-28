@@ -52,6 +52,8 @@
 // incomeCal(1200,2,3) // very strict in typeScript not send morethan 2 params
 //? calTax(1200)  //completion error we just passed one parmas so  if not pass 2nd parms then set default value
 
+//? void return Undefinde and never returns nothing this is the main difference
+
 
 //! *** Objects ***
 //let employe:{id:number,name?:''} // opetional settings
@@ -86,6 +88,29 @@
 //?     retire:(date:Date)=>{console.log(date)}
 //?  }
 
+//! ***** Interface *******
+ interface Employe{
+  id:number,
+  name:string
+ }
+ interface Guy extends Employe{
+  profession: string
+ }
+
+//  type X = {
+//   a:number,
+//   b:string
+//  }
+
+//  type Y = X &{
+//   c:string,
+//   d:number
+//  }
+
+//  let y : Y = {
+//   c:'skdfnn',
+//   d:45,
+//  }
 
 //! *** Union Types ***
 
