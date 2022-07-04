@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p onclick="clickme()">Hi i'm Gopi Mudumal</p>
+</body>
+</html>
+
+<script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+    const p = document.querySelector('p')
+
+    const clickme = ()=>{
+        p.style.color='red';
+        p.style.fontSize="45px";
+    }
+
+     // Regular
+    console.log(dogs)
+
+    // Interpolated
+    console.log('Hi this a %s sting','gopi')
+
+    // Styled
+    console.log('%c I am some great text','font-size:40px;background:red; color:blue')
+
+    // warning!
+    console.warn('hi this is warn for you')
+
+    // Error :|
+    console.error('hi this error ')
+
+    // Info
+    console.info('Crocodiles eat 3-4 people per year');
+
+
+    // Testing
+
+    console.assert(p.classList.contains('ouch'),'that is wrong')
+
+    // clearing
+    console.clear()
+
+    // Viewing DOM Elements
+    console.dir(p)
+
+    // Grouping together
+    dogs.forEach(dog=>{
+        console.groupCollapsed(`${dog.name}`)
+        console.log(`name is ${dog.name}`)
+        console.log(`${dog.name} is ${dog.age} year old`)
+        console.groupEnd(`${dog.name}`)
+    });
+
+
+    // counting
+    console.count("shiva")
+    console.count("shiva")
+    console.count("shiva")
+    console.count("shiva")
+    console.count("shiva")
+    console.count('radha')
+    console.count('radha')
+    console.count('radha')
+
+    // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+
+
+</script>
